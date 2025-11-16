@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello Page</title>
+    <title>Wedding Invitation</title>
     <style>
         body {
             margin: 0;
@@ -14,13 +14,45 @@
             font-family: Arial, sans-serif;
             background-color: #f5f5f5;
         }
-        h1 {
-            font-size: 3rem;
+
+        .container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            padding: 20px;
+        }
+
+        img {
+            max-width: 350px;
+            height: auto;
+            border-radius: 6px;
+        }
+
+        .message {
+            font-size: 1.4rem;
             color: #333;
+            max-width: 300px;
+            line-height: 1.4;
+        }
+
+        /* Responsive (stack on small screens) */
+        @media (max-width: 700px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Hello there</h1>
+
+    <div class="container">
+        <img src="invitation.png" alt="Wedding Invitation">
+        <div class="message">
+            It would not be the same without you!  
+            We hope you can join us for our special day.
+        </div>
+    </div>
+
 </body>
 </html>
