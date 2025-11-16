@@ -1,58 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wedding Invitation</title>
-    <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wedding Invite</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Times New Roman", serif;
+      background: url('marble-background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
-        .container {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-            padding: 20px;
-        }
+    .container {
+      display: flex;
+      gap: 80px;
+      align-items: center;
+    }
 
-        img {
-            max-width: 350px;
-            height: auto;
-            border-radius: 6px;
-        }
+    .left img {
+      width: 400px;
+      height: auto;
+    }
 
-        .message {
-            font-size: 1.4rem;
-            color: #333;
-            max-width: 300px;
-            line-height: 1.4;
-        }
+    .right {
+      max-width: 350px;
+      font-size: 28px;
+      color: #000;
+      line-height: 1.4;
+    }
 
-        /* Responsive (stack on small screens) */
-        @media (max-width: 700px) {
-            .container {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
-    </style>
+    .right a {
+      color: #000;
+      font-size: 20px;
+    }
+
+    .right a:hover {
+      text-decoration: underline;
+    }
+      @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .left img {
+        width: 80%;
+        max-width: 320px;
+      }
+
+      .right {
+        font-size: 22px;
+        max-width: 90%;
+      }
+
+      .right a {
+        font-size: 18px;
+      }
+    }
+  </style>
 </head>
 <body>
-
-    <div class="container">
-        <img src="A.png" alt="Wedding Invitation">
-        <div class="message">
-            It would not be the same without you!  
-            We hope you can join us for our special day.
-        </div>
+  <div class="container">
+    <div class="left">
+      <img src="A.png" alt="Wedding Invitation" />
     </div>
-
+    <div class="right">
+      <p>It would not be the<br>same without you! We<br>hope you can join us<br>for our special day.</p>
+      <p><a href="https://theknot.com/theDifedes" target="_blank">Visit Website</a></p>
+    </div>
+  </div>
 </body>
 </html>
